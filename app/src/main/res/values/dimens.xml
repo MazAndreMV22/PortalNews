@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="nav_drawer_width">260dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="item_offset">10dp</dimen>
+    <dimen name="detail_backdrop_height">250dp</dimen>
+    <dimen name="backdrop_title">30dp</dimen>
+    <dimen name="backdrop_subtitle">18dp</dimen>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_item_radius">0dp</dimen>
+    <dimen name="item_cover_height">160dp</dimen>
+    <dimen name="item_title_padding">10dp</dimen>
+    <dimen name="item_title">15dp</dimen>
+    <dimen name="item_price_padding_bottom">5dp</dimen>
+    <dimen name="item_price">12dp</dimen>
+
+    <dimen name="item_size">192dp</dimen>
+</resources>

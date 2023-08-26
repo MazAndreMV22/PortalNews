@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.ifsoft.mynews">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_CORSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="ru.ifsoft.mynews.app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="ru.ifsoft.mynews.SearchActivity" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="ru.ifsoft.mynews.AppActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name=".service.MyFcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.MyInstanceIDListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="ru.ifsoft.mynews.service.MyService"
+            android:exported="false" />
+
+        <activity
+            android:name="ru.ifsoft.mynews.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.SignupActivity"
+            android:label="@string/title_activity_signup"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.MainActivity"
+            android:label="@string/title_activity_feeds" />
+        <activity
+            android:name="ru.ifsoft.mynews.RecoveryActivity"
+            android:label="@string/title_activity_recovery"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="ru.ifsoft.mynews.WebViewActivity"
+            android:label="@string/title_activity_web_view" />
+        <activity
+            android:name="ru.ifsoft.mynews.ChangePasswordActivity"
+            android:label="@string/title_activity_change_password"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.ServicesActivity"
+            android:label="@string/title_activity_services" />
+        <activity
+            android:name="ru.ifsoft.mynews.ViewItemActivity"
+            android:label="@string/title_activity_view_item"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.ProfileActivity"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name="ru.ifsoft.mynews.NotificationsActivity"
+            android:label="@string/title_activity_notifications" />
+        <activity
+            android:name="ru.ifsoft.mynews.PhotoViewActivity"
+            android:label="@string/title_activity_photo_view"
+            android:theme="@style/PhotoViewTheme" />
+        <activity
+            android:name="ru.ifsoft.mynews.AccountSettingsActivity"
+            android:label="@string/title_activity_account_settings"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="ru.ifsoft.mynews.NotificationsSettingsActivity"
+            android:label="@string/title_activity_notifications_settings" />
+
+        <activity
+            android:name="ru.ifsoft.mynews.SupportActivity"
+            android:label="@string/title_activity_support"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="ru.ifsoft.mynews.DeactivateActivity"
+            android:label="@string/title_activity_deactivate"
+            android:theme="@style/MyMaterialTheme" />
+
+        <activity
+            android:name="ru.ifsoft.mynews.CategoryActivity"
+            android:label="@string/title_activity_category"
+            android:theme="@style/MyMaterialTheme" />
+    </application>
+
+</manifest>
